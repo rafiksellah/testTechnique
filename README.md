@@ -31,12 +31,12 @@ git clone https://github.com/your-username/testTechnique.git
 
 cd testTechnique
 
-## Build and start Docker containers
+## Build and start Docker containers and start server
 
 docker-compose up --build
-
-##Run Symfony Server
-docker-compose exec app symfony server:start
+localhost:8082
+#phpMyadmin
+localhost:8081
 
 #install Dependencies
 docker-compose exec app composer install
@@ -54,4 +54,6 @@ docker-compose exec app php php /code/bin/console doctrine:fixtures:load
 #Run Tests (Optional)
 
 docker-compose exec app php php /code/bin/console
+
+
    
