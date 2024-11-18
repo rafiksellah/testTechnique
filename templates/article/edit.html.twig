@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Update Article{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="text-center">Update Article</h1>
+    {{ form_start(form, {'method': 'POST', 'action': path('edit_article', {id: article.id})}) }}
+    <div class="mb-3">
+        {{ form_label(form.title, 'Title', {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_widget(form.title, {'attr': {'class': 'form-control', 'placeholder': 'Enter the title'}}) }}
+    </div>
+    <div class="mb-3">
+        {{ form_label(form.content, 'Content', {'label_attr': {'class': 'form-label'}}) }}
+        {{ form_widget(form.content, {'attr': {'class': 'form-control', 'rows': 5, 'placeholder': 'Enter the content'}})
+        }}
+    </div>
+    <button type="submit" class="btn btn-warning w-100">Update Article</button>
+    {{ form_end(form) }}
+</div>
+{% endblock %}
