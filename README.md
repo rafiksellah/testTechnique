@@ -42,16 +42,16 @@ docker-compose exec app symfony server:start
 docker-compose exec app composer install
 
 #create database
-docker-compose exec app php bin/console doctrine:database:create
+docker-compose exec app php php /code/bin/console doctrine:database:create
 
 #Run migrations
-docker-compose exec app php bin/console doctrine:migrations:migrate
+docker-compose exec app php php /code/bin/consoledoctrine:migrations:migrate
 
 #Load Fixtures (Optional):
 
-docker-compose exec app php bin/console doctrine:fixtures:load
+docker-compose exec app php php /code/bin/console doctrine:fixtures:load
 
 #Run Tests (Optional)
 
-docker-compose exec app php bin/phpunit
+docker-compose exec app php php /code/bin/console
    
