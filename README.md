@@ -42,21 +42,21 @@ localhost:8082
 localhost:8081
 
 #install Dependencies
-docker-compose exec app composer install
+docker-compose exec composer install
 
 #create database
-docker-compose exec app php php /code/bin/console doctrine:database:create
+docker-compose exec php php /code/bin/console doctrine:database:create
 
 #Run migrations
-docker-compose exec app php php /code/bin/consoledoctrine:migrations:migrate
+docker-compose exec php php /code/bin/console doctrine:database:create
 
 #Load Fixtures (Optional):
 
-docker-compose exec app php php /code/bin/console doctrine:fixtures:load
+docker-compose exec php php /code/bin/console doctrine:fixtures:load
 
 #Run Tests (Optional)
 
-docker-compose exec app php php /code/bin/console
+docker-compose exec  php php /code/bin/console
 
 
    
