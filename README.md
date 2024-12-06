@@ -34,8 +34,11 @@ cd testTechnique
 ## Build and start Docker containers and start server
 
 docker-compose up --build
+
 localhost:8082
+
 #phpMyadmin
+
 localhost:8081
 
 #install Dependencies
