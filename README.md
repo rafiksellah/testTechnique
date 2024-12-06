@@ -27,7 +27,7 @@ Follow these steps to get your development environment up and running.
 
 Start by cloning the repository to your local machine:
 
-git clone https://github.com/your-username/testTechnique.git
+git clone https://github.com/rafiksellah/testTechnique.git
 
 cd testTechnique
 
