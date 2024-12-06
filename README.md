@@ -50,6 +50,10 @@ mv composer.phar /usr/local/bin/composer
 cd /code
 composer install
 
+#mariadb configue
+apk update && apk add mariadb-client
+mysql -h database -u root -p
+
 #create database
 docker-compose exec app php php /code/bin/console doctrine:database:create
 
