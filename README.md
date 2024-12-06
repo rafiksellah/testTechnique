@@ -42,7 +42,13 @@ localhost:8082
 localhost:8081
 
 #install Dependencies
-docker-compose exec app composer install
+docker-compose exec php sh
+
+#in repo /var/www/html # 
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+cd /code
+composer install
 
 #create database
 docker-compose exec app php php /code/bin/console doctrine:database:create
